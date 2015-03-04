@@ -25,11 +25,11 @@ def parse(html, c, mmd):
 	for i in range(len(titles)):
 		print str(n) + " : " + imgurls[i]
 		suf = imgurls[i][-4:]
-		if (suf == '.jpg'):
+		if (suf == '.jpg' or suf == '.JPG' or suf == '.png' or suf == '.PNG'):
 			out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
 			print imgurls[i]	
 			try:
-				urllib.urlretrieve(imgurls[i], folder + '/' + str(an) + '.jpg')
+				urllib.urlretrieve(imgurls[i], folder + '/' + str(an) + suf)
 				out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
 				an += 1
 			except:
