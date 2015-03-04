@@ -27,7 +27,7 @@ def parse(html, c, mmd):
 		print str(n) + " : " + imgurls[i]
 		suf = imgurls[i][-4:]
 		if (suf.lower() in cor_suf):
-			out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
+			#out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
 			#print imgurls[i]	
 			try:
 				urllib.urlretrieve(imgurls[i], folder + '/' + str(an) + suf)
