@@ -1,6 +1,7 @@
 import urllib
 import simplejson
 import os
+import time
 
 def extractData(category): # extract titles and links of images for one category from Google
 	num_queries = 16 * 4  
@@ -22,6 +23,7 @@ def extractData(category): # extract titles and links of images for one category
 				if category in title:
 					print title + ": " + image
 					res[title] = image
+		#time.sleep(3)
 	writeData(category, res)
 
 def writeData(folder, d):
