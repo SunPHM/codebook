@@ -14,7 +14,7 @@ plain
 pyramid
 rhino
 river
-stop sign
+stop-sign
 strawberry
 sunflower
 tree
