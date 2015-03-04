@@ -1,11 +1,16 @@
 # leave here for future improvment
-import bs4
+import urllib
 from bs4 import BeautifulSoup
+import mechanize
 
-f = open('cat.html','r')
-soup = BeautifulSoup(f.read())
-#print soup.title
-#print soup.prettify()
-#f1 = open('a.html', 'w')
-#f1.write(soup.find_all('a').str())
-print soup.find_all('div', id='cnt', limit=10)
+
+def getSearch(query):
+	browser = mechanize.Browser()
+	browser.set_handle_robots(False)
+	browser.addheaders = [('User-agent', 'Chrome')]
+	url = 'https://www.google.com/search?es_sm=122&source=lnms&tbm=isch&sa=X&q=' + query
+	html = browser.open(url)
+	print html
+	
+	
+getSearch('cat')
