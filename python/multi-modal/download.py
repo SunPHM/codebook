@@ -9,7 +9,7 @@ def getSearch(query):
 	browser.set_handle_robots(False)
 	browser.addheaders = [('User-agent', 'Chrome')]
 	url = 'https://www.google.com/search?es_sm=122&source=lnms&tbm=isch&sa=X&q=' + query
-	html = browser.open(url)
+	html = browser.open(url).read()
 	print html
 	
 	
