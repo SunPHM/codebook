@@ -1,0 +1,20 @@
+airplane
+alligator
+car
+cat
+cellphone
+chair
+dog
+dolphin
+elephant
+mountain
+panda
+pigeon
+plain
+pyramid
+rhino
+river
+stop sign
+strawberry
+sunflower
+tree
