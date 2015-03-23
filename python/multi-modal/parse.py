@@ -22,7 +22,8 @@ def parse(html, c, mmd):
 	#print len(titles)	
 	n = 0
 	an = 0
-	cor_suf = ['.jpg', '.png', '.gif']
+	#cor_suf = ['.jpg', '.png', '.gif']
+	cor_suf = ['.jpg']
 	for i in range(len(titles)):
 		print str(n) + " : " + imgurls[i]
 		suf = imgurls[i][-4:]
@@ -30,8 +31,8 @@ def parse(html, c, mmd):
 			#out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
 			#print imgurls[i]	
 			try:
-				urllib.urlretrieve(imgurls[i], folder + '/' + str(an) + suf)
-				out.write(titles[i] + "  ---  " + imgurls[i] + '\n')
+				urllib.urlretrieve(imgurls[i], folder + '/' + str(an) + '.jpg')
+				out.write(str(an) + '.jpg  ---  ' + titles[i] + "  ---  " + imgurls[i] + '\n')
 				an += 1
 			except:
 				print 'this link ' + imgurls[i] + ' is corrupted or forbidden access'
@@ -47,9 +48,9 @@ def read(file):
 		cg.append(category)
 	return cg
 
-def main(inp, out):
+def main(inp, data, out):
 	cg = read(inp)
 	for c in cg:
-		parse('data/' + c + '.html', c, out)
+		parse(data  + '/' + c + '.html', c, out)
 
-main('category.txt', 'mmd')
+main('cate.txt', 'data1', 'lmm')

@@ -34,4 +34,4 @@ def mtToMap (mt):
 		index += 1
 	return m	
 
-clean('/home/hadoop/Downloads/mmd-3', '/home/hadoop/Downloads/mmd-3.1')
+clean('lmm', 'lmm-1')
